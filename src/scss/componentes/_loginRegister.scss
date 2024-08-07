@@ -1,0 +1,132 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.contenedor {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 150px auto;
+
+}
+
+.descripcion-pagina {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: v.$verde-claro;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .contenido{
+        background: white;
+        padding: 50px;
+        border-radius: 5px;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 550px;
+        width: 425px;
+        
+        .campo {
+            margin-bottom: 25px;
+    
+            label {
+                display: block;
+                margin: 0px 0px 2px 6px;
+                font-size: 12px;
+                font-weight:lighter;
+            }
+    
+            input {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+        
+                &:focus {
+                    border-color: 2px solid v.$verde-claro;
+                    outline: none;
+                }
+            }
+        }    
+        .boton {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            background-color: v.$verde-claro;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        
+            &:hover {
+            background-color: darken(v.$verde-claro, 25%);
+            }
+        }
+    }
+    
+
+}
+
+.acciones {
+  margin-top: 25px;
+  text-align: center;
+
+  a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: v.$verde-claro;
+    text-decoration: none;
+    padding: 15px 25px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive
+@include m.tablet {
+  .contenedor {
+    padding: 10px;
+  }
+
+  .descripcion-pagina {
+    font-size: 25px;
+  }
+
+  .formulario {
+    .campo {
+      input {
+        font-size: 0.875rem;
+      }
+    }
+
+    .boton {
+      font-size: 0.875rem;
+    }
+  }
+
+  .acciones {
+    font-size: 13px;
+  }
+}

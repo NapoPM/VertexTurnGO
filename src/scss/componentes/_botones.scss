@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.btn {
+    display: block;
+    padding: 10px 15px;
+    max-width: 220px;
+    font-size: 2rem;
+    font-weight: v.$bold;
+    color: #fff;
+    background-color: v.$verde-claro;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 50px;
+
+    &:hover {
+        color: v.$gris  ;
+        background-color: darken(v.$verde-claro, 20%);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px v.$verde-oscuro;
+    }
+}

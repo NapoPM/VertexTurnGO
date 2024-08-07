@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.form-group {
+
+    label{
+        color: black;
+        font-size: 2rem;
+    }
+
+    .form-control {
+        font-size: 1.5rem;
+        color: black;
+    }
+}
+
+
+.btn-primary{
+    font-size: 3rem;
+}
+
+.underForm{
+    margin-bottom: 5rem;
+}
+
+.acciones{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.menu{
+    font-size: 3rem;
+}

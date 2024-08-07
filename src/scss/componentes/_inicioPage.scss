@@ -1,0 +1,108 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+
+.contenedor-carrusel {
+    .quienes-somos {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+
+        h2 {
+            font-size: 3.6rem;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .carrusel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 300%; // Ajustar según el número de slides
+            }
+
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+
+                .img-carrusel {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                border: none;
+                color: #fff;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 24px;
+                line-height: 1;
+                border-radius: 50%;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+            }
+
+            .carousel-control-prev {
+                left: 10px;
+            }
+
+            .carousel-control-next {
+                right: 10px;
+            }
+
+            .carousel-indicators {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+
+                button {
+                    width: 12px;
+                    height: 12px;
+                    background: #fff;
+                    border: none;
+                    border-radius: 50%;
+                    margin: 0 4px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+
+                    &:hover,
+                    &.active {
+                        background: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,23 @@
+{
+    "name": "usuario/turn-gomvc2.06",
+    "description": "Proyecto PHP 8 MVC, SQL, SASS, GULP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers/",
+            "Model\\" : "./models",
+            "Classes\\": "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "NapoPM",
+            "email": "napoleonpiovanomohr@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "intervention/image": "^2.5"
+    }
+}
