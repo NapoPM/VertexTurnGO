@@ -67,6 +67,7 @@ $router->post('/empresa/turnos/turnos', [TurnosController::class, 'turnos']);
 // $router->post('/login', [LoginUsuarioController::class, 'login']);
 
 // Cerrar Sesión  - RESERVADOR
+$router->get('/index', [LoginUsuarioController::class, 'inicioReservador']);
 $router->get('/logout', [LoginUsuarioController::class, 'logout']);
 
 // Recuperar Password  - RESERVADOR

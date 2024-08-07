@@ -28,3 +28,46 @@
         box-shadow: 0 0 5px v.$verde-oscuro;
     }
 }
+
+.btn-editar{
+    display: block;
+    padding: 15px 25px;
+    max-width: 220px;
+    font-size: 2rem;
+    font-weight: v.$bold;
+    color: #fff;
+    background-color: v.$verde-claro;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    
+
+    &:hover {
+        color: v.$gris  ;
+        background-color: darken(v.$verde-claro, 20%);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px v.$verde-oscuro;
+    }
+}
+
+.boton-eliminar {
+    display: block  ;
+    text-align: center;
+    text-decoration: none;
+    background-color: v.$btn-rojo;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: v.$bold;
+    border: none;
+    cursor: pointer;
+    padding: 19px 42px;
+    max-width: 220px;
+    &:hover {
+      background-color: darken(v.$btn-rojo, 20%);
+    }
+  }

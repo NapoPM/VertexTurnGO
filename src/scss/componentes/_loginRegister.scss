@@ -49,23 +49,24 @@
     
             label {
                 display: block;
-                margin: 0px 0px 2px 6px;
+                margin: 0px 0px 5px 6px;
                 font-size: 12px;
                 font-weight:lighter;
             }
     
             input {
-                width: 100%;
-                padding: 0.75rem;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                font-size: 1rem;
-        
-                &:focus {
-                    border-color: 2px solid v.$verde-claro;
-                    outline: none;
-                }
-            }
+              width: 100%;
+              padding: 10px;
+              border: 1px solid v.$gris   ;
+              border-radius: 4px;
+              font-size: 16px;
+
+              &:focus {
+              border-color: v.$verde;
+              box-shadow: 0 0 5px v.$verde-claro;
+              outline: none;
+              }
+          }
         }    
         .boton {
             width: 100%;

@@ -1,0 +1,66 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario-contacto{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .contenido{
+        background: white;
+        padding: 50px;
+        border-radius: 5px;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+        width: 300px;
+
+        @include m.tablet{
+            max-width: 600px;
+            width: 550px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .campo {
+                flex: 1 1 calc(100% - 20px); // Dos columnas con un gap de 20px entre ellas
+                min-width: calc(50% - 20px);
+
+                label {
+                    display: block;
+                    font-weight: bold;  
+                    margin-bottom: 5px;
+                    color: #000000;
+                }
+
+                .control {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid v.$gris   ;
+                    border-radius: 4px;
+                    font-size: 16px;
+
+                    &:focus {
+                    border-color: v.$verde;
+                    box-shadow: 0 0 5px v.$verde-claro;
+                    outline: none;
+                    }
+                }
+                
+
+                textarea.control {
+                    resize: vertical;
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+
+}
+

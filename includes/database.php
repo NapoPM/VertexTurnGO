@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', 'esea', 'turngomvc');
+$db = mysqli_connect('localhost', 'root', 'Tricolor77', 'turngomvc');
 
 
 if (!$db) {

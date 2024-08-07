@@ -2,10 +2,10 @@
 
 include_once __DIR__ . '/../templates/alertas.php';
 ?>
-<div class="card container mt-5 col-md-8 justify-content-center padfooter card underForm">
-    <div class="card-header text-center">
-        <h3>Registrarse</h3>
-    </div>
+<div class="contenedor crear-cuenta">
+    
+<p class="descripcion-pagina">Registrarse</p>
+    
     <div class="card-body">
 
         <!-- Aca va el formulario -->
@@ -46,14 +46,18 @@ include_once __DIR__ . '/../templates/alertas.php';
                         <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar Contraseña">
                     </div>
                 
+                    <input 
+                        type="submit" 
+                        value="Registrarse" 
+                        class="boton">
             </div>
 
-            <input type="submit" value="Registrarse" class="boton">
+            
         </form>
 
         <div class="acciones">
-            <a href="/login">¿Ya tienes una cuenta? Inicia Sesión</a>
+            <a href="/login">¿Ya tienes una cuenta? Iniciar Session</a>
+            <a href="/olvide">¿Olvidaste tu Password? Recuperar contraseña</a>
         </div>
-
     </div>
 </div>

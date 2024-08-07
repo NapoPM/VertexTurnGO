@@ -13,8 +13,8 @@
                 <li>
                     <p>Nombre: <span><?php echo htmlspecialchars($servicio->nombreServicio, ENT_QUOTES, 'UTF-8'); ?></span></p>
                     <p>Precio: <span>$</span> <span><?php echo htmlspecialchars($servicio->precio, ENT_QUOTES, 'UTF-8'); ?></span></p>
-                    <div class="acciones">
-                        <a class="boton" href="/empresa/servicios/actualizar?id=<?php echo htmlspecialchars($servicio->id, ENT_QUOTES, 'UTF-8'); ?>">Editar</a>
+                    <div class="accione">
+                        <a class="btn-editar" href="/empresa/servicios/actualizar?id=<?php echo htmlspecialchars($servicio->id, ENT_QUOTES, 'UTF-8'); ?>">Editar</a>
                         <form action="/servicios/eliminar" method="POST">
                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($servicio->id, ENT_QUOTES, 'UTF-8'); ?>">
                             <input type="submit" value="Eliminar" class="boton-eliminar">

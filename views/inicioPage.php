@@ -185,43 +185,70 @@
 
 
     <!-- Contacto Seccion -->
-    <section id="contacto" class="contacto container mt-5 pt-5">
-        <form action="#" method="post" class="formulario bg-light p-4 rounded shadow">
-            <h1 class="text-center">Contacto</h1>
-            <p class="text-center">Puedes ponerte en contacto a través de:</p>
+    <section id="contacto" class="contenedor">
+        <h1 class="text-center">Contacto</h1>
+        <p class="descripcion-pagina">Puedes ponerte en contacto a través de:</p>
             <ul class="list-unstyled text-center">
                 <li>Email: <a href="mailto:turngo@gmail.com">turngo@gmail.com</a></li>
                 <li>Teléfono: <a href="tel:+543573000000">+54 3573 000000</a></li>
             </ul>
+                
+        <form action="#" method="post" class="formulario-contacto">
+            <!-- <h2>Formulario de contacto</h2> -->
+            <div class="contenido">
 
-            <h4>Formulario de contacto</h4>
+                
+                
 
-            <div class="form-group">
-                <label for="NombreUsuario">Nombre y Apellido</label>
-                <input type="text" name="Nombre" id="NombreUsuario" class="form-control" placeholder="Ingrese su Nombre"
-                    required>
-            </div>
+                <div class="campo">
+                    <label for="NombreUsuario">Nombre y Apellido</label>
+                    <input 
+                        type="text" 
+                        name="Nombre" 
+                        id="NombreUsuario" 
+                        class="control" 
+                        placeholder="Ingrese su Nombre"
+                        required>
+                </div>
 
-            <div class="form-group">
-                <label for="EmailUsuario">Email</label>
-                <input type="email" name="Email" id="EmailUsuario" class="form-control" placeholder="ejemplo@gmail.com"
-                    required>
-            </div>
+                <div class="campo">
+                    <label for="EmailUsuario">Email</label>
+                    <input 
+                        type="email" 
+                        name="Email" 
+                        id="EmailUsuario" 
+                        class="control" 
+                        placeholder="ejemplo@gmail.com"
+                        required>
+                </div>
 
-            <div class="form-group">
-                <label for="EmailUsuario">Teléfono</label>
-                <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Ingrese su Número"
-                    required>
-            </div>
+                <div class="campo">
+                    <label for="EmailUsuario">Teléfono</label>
+                    <input 
+                        type="tel" 
+                        name="telefono" 
+                        id="telefono" 
+                        class="control" 
+                        placeholder="Ingrese su Número"
+                        required>
+                </div>
 
-            <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Mensaje..."
-                    required></textarea>
-            </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje"
+                        class="control" 
+                        rows="5" 
+                        placeholder="Mensaje..."
+                        required></textarea>
+                </div>
 
-            <div class="text-center">
-                <button type="submit" name="Enviar" id="Enviar" class="btn btn-primary">Enviar</button>
+                
             </div>
         </form>
+        
+        <div class="text-center">
+            <button type="submit" name="Enviar" id="Enviar" class="btn">Enviar</button>
+        </div>
     </section>

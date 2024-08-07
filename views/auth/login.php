@@ -1,29 +1,40 @@
-<?php
+<!-- <h1><?php echo $titulo ?></h1> -->
+<div class=" contenedor login">
+    <?php /* include_once __DIR__ .'/../templates/nombre-sitio.php'; */ ?>
+    
+        <h2 class="descripcion-pagina">Iniciar Sesión</h2>
 
-include_once __DIR__ . '/../templates/alertas.php';
-?>
-<div class="card container mt-5 col-md-8 justify-content-center padfooter card underForm">
-    <div class="card-header text-center">
-        <h3>Iniciar Sesión</h3>
-    </div>
-    <div class="card-body">
-    <form action="/login" method="POST">
-        <div class="row" id="formularioRegistro">
-            <div class="col-md-6">
-                <div class="form-group">
+        <?php /*include_once __DIR__ .'/../templates/alertas.php';*/ ?>
+
+        <form class="formulario" method="POST" action="/login" >
+            <div class="contenido">
+                <div class="campo">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Tu Email" name="email" />
+                    <input 
+                        type="email"
+                        id="email"
+                        placeholder="Ingresar Email"
+                        name="email"
+                    />
                 </div>
-                <div class="form-group">
+
+                <div class="campo">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Tu Password" name="password" />
+                    <input 
+                        type="password"
+                        id="password"
+                        placeholder="Ingresar Password"
+                        name="password"
+                    />
                 </div>
-                <input type="submit" value="Registrarse" class="btn btn-primary btn-block">
-            </div>
+
+                <input type="submit" class="boton" value="Iniciar Sesión">
+            </div>    
+        
+        </form>
+
+        <div class="acciones">
+            <a href="/crear-cuenta">¿Aún no tienes una cuenta? Obtener una</a>
+            <a href="/olvide">¿Olvidaste tu Password?</a>
         </div>
-    </form>
-    </div>
-    <div class="acciones">
-        <a href="/olvide">¿Olvidaste tu Password?</a>
-    </div>
-</div>
+   </div>

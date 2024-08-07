@@ -8,7 +8,7 @@
     <footer class="footer">
         <div class="contenedor-foot">
             <div class="nombreCompania">
-                <a href="/" class="img-logo"></a><p><b>VertexDEV</b> &copy; 2024. Todos los derechos reservados.</p>
+                <a href="/" class="img-logo"></a><p><b>VertexDv</b> &copy; 2024. Todos los derechos reservados.</p>
             </div>
         </div>
         
