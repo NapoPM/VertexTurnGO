@@ -91,33 +91,6 @@ class DashboardReservadorController {
 
 
 
-    // public static function mostrarServiciosCategoria1(Router $router) {
-    //     self::mostrarServiciosPorCategoria($router, 1, '/reservador/serviciosXcategoria/servicios_categoria_1');
-    // }
-
-    // public static function mostrarServiciosCategoria2(Router $router) {
-    //     self::mostrarServiciosPorCategoria($router, 2, '/reservador/serviciosXcategoria/servicios_categoria_2');
-    // }
-
-    // public static function mostrarServiciosCategoria3(Router $router) {
-    //     self::mostrarServiciosPorCategoria($router, 3, '/reservador/serviciosXcategoria/servicios_categoria_3');
-    // }
-
-    // // Método reutilizable para mostrar servicios por categoría
-    // private static function mostrarServiciosPorCategoria(Router $router, $id_categoria, $vista) {
-    //     $servicios = Servicio::obtenerPorCategoria($id_categoria);
-    //     $categoria = Categorias::find($id_categoria);
-
-    //     if ($categoria) {
-    //         $router->render($vista, [
-    //             'titulo' => "Servicios de la Categoría " . $categoria->nombre,
-    //             'servicios' => $servicios,
-    //             'categoria' => $categoria
-    //         ]);
-    //     } 
-    // }
-
-
     public static function mostrarTodasCategorias(Router $router) {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();

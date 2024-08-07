@@ -92,6 +92,9 @@ $router->get('/reservador/categorias', [DashboardReservadorController::class, 'm
 // Ruta para mostrar servicios por categoría usando un parámetro GET - RESERVADOR
 $router->get('/reservador/categoria', [DashboardReservadorController::class, 'mostrarServiciosPorCategoria']);
 
+// Solicitud de sacar turno - RESERVADOR
+$router->post('/reservador/sacar-turno', [TurnosController::class, 'sacarTurno']);
+
 // Perfil - RESERVADOR
 $router->get('/reservador/perfil', [DashboardReservadorController::class, 'perfilReservador']);
 
