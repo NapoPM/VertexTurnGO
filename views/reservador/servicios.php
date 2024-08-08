@@ -2,23 +2,24 @@
 esReservador();
 ?>
 
-<h1>Servicios de la Categoría <?php echo htmlspecialchars($categoria->nombre); ?></h1>
+<h1 class="titulo-categorias">Servicios de la Categoría <?php echo htmlspecialchars($categoria->nombre); ?></h1>
 
 <?php if (!empty($servicios)): ?>
-    <div class="card-container">
+    <div class="contenedor-servicios">
         <?php foreach ($servicios as $servicio): ?>
-            <div class="card">
-                <h2><?php echo htmlspecialchars($servicio->nombreServicio); ?></h2>
-                <p><?php echo htmlspecialchars($servicio->descripcion); ?></p>
-                <p>Precio: <?php echo htmlspecialchars($servicio->precio); ?></p>
-                <p>Empresa: <?php echo htmlspecialchars($servicio->nombreEmpresa); ?></p>
-                <!-- Mostrar imagen del servicio si existe -->
-                <?php if ($servicio->imagenServicio): ?>
-                    <img src="/path/to/images/<?php echo htmlspecialchars($servicio->imagenServicio); ?>" alt="<?php echo htmlspecialchars($servicio->nombreServicio); ?>">
-                <?php endif; ?>
-
-                <!-- Botón para sacar un turno -->
-                <button class="boton" onclick="mostrarModal(<?php echo $servicio->id; ?>)">Sacar Turno</button>
+            <div class="servicio">
+                <div class="servicio-imagen">
+                    <?php if ($servicio->imagenServicio): ?>
+                        <img class="img-servicio" src="/path/to/images/<?php echo htmlspecialchars($servicio->imagenServicio); ?>" alt="<?php echo htmlspecialchars($servicio->nombreServicio); ?>">
+                    <?php endif; ?>
+                </div>
+                <div class="servicio-detalles">
+                    <p class="nombre-empresa">Empresa: <?php echo htmlspecialchars($servicio->nombreEmpresa); ?></p>
+                    <h2 class="nombrecategoria"><?php echo htmlspecialchars($servicio->nombreServicio); ?></h2>
+                    <p class="descripcion-categoria"><?php echo htmlspecialchars($servicio->descripcion); ?></p>
+                    <p class="precio">Precio: $<?php echo htmlspecialchars($servicio->precio); ?></p>
+                    <button class="btn-categoria" onclick="mostrarModal(<?php echo $servicio->id; ?>)">Sacar Turno</button>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
@@ -38,50 +39,15 @@ esReservador();
                 <label for="hora">Hora:</label>
                 <input type="time" name="hora" id="hora" required>
 
-                <input type="submit" value="Confirmar Turno" class="boton">
+                <input type="submit" value="Confirmar Turno" class="btn-categoria">
             </form>
         </div>
     </div>
+<?php endif; ?>
 
-    <style>
-        .modal {
-            display: block;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
 
-        .modal-contenido {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
 
-        .cerrar {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .cerrar:hover,
-        .cerrar:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
-
+<!-- 
     <script>
         function mostrarModal(servicioId) {
             // Establecer el ID del servicio en el formulario
@@ -100,42 +66,8 @@ esReservador();
                 modal.style.display = 'none';
             }
         }
-    </script>
-<?php else: ?>
-    <p>No hay servicios disponibles en esta categoría.</p>
-<?php endif; ?>
+    </script> -->
 
 
 
 
-<style>
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: calc(33.333% - 40px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-.card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 10px;
-}
-</style>

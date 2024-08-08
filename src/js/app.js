@@ -64,3 +64,29 @@ function eliminarTodasNotificaciones() {
   // Lógica para eliminar todas las notificaciones
   alert("Eliminar todas las notificaciones");
 }
+
+
+
+
+// Modal para la parte de sacar turno en RESERVADOR
+function mostrarModal(servicioId) {
+  // Establecer el ID del servicio en el formulario
+  document.getElementById('servicio-id').value = servicioId;
+  document.getElementById('modal-turno').style.display = 'block';
+}
+
+function cerrarModal() {
+  document.getElementById('modal-turno').style.display = 'none';
+}
+
+// Cerrar el modal si el usuario hace clic fuera de él
+window.onclick = function(event) {
+  var modal = document.getElementById('modal-turno');
+  if (event.target == modal) {
+      modal.style.display = 'none';
+      
+  }
+}
+
+
+//Hasta aca lo del modal  
